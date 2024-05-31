@@ -4,11 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicios Forms</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-<link rel="stylesheet" href="./style.css">
-<script src="./script.js"></script>
-    <body>
-    
-    
-    </body>
+<body>
+    <div class="container">        
+        <form action="/submit" method="post" onsubmit="return validaSenha()">
+            <label for="username">Nome de usuário:</label>
+            <input type="text" id="username" name="username" required>
+          
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="confPassword">Confirme sua senha:</label>
+            <input type="password" id="confPassword" name="confPassword" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="date">Data de nascimento:</label>
+            <input type="date" name="birthday">
+
+            <button type="submit">Cadastrar</button>
+        </form>
+        <p class="msgSucesso" id="msgLogin" style="display: none;">Login bem sucedido. Bem-vindo!</p>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
 </html>
