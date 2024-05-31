@@ -4,27 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicios Forms</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-<link rel="stylesheet" href="./style.css">
-<script src="./script.js"></script>
 <body>
     <div class="container">
-        
         <form id="contact-form">
-          <label for="username">Nome de usuário:</label>
-          <input type="text" id="username" name="username" required minlength="3" maxlength="15">
-        
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-        
-          <label for="subject">Assunto:</label>
-          <input type="text" id="subject" name="subject" required minlength="5" maxlength="100">
+            <label for="username">Nome de usuário:</label>
+            <input type="text" id="username" name="username" required minlength="3" maxlength="15" aria-label="Nome de usuário" title="Digite seu nome de usuário">
 
-        <label for="message">Mensagem:</label>
-        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required aria-label="Email" title="Digite seu endereço de email">
 
-        <input type="submit" value="Enviar">
-        <p class="success-message" id="success-message" style="display: none;">Mensagem enviada com sucesso</p>
+            <label for="subject">Assunto:</label>
+            <input type="text" id="subject" name="subject" required minlength="5" maxlength="100" aria-label="Assunto" title="Digite o assunto da mensagem">
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="4" cols="50" aria-label="Mensagem" title="Digite sua mensagem"></textarea>
+
+            <input type="submit" value="Enviar" aria-label="Enviar mensagem" title="Clique para enviar a mensagem">
+            <p class="success-message" id="success-message" style="display: none;">Mensagem enviada com sucesso</p>
         </form>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>
